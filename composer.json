@@ -1,0 +1,22 @@
+{
+    "name": "abdellahramadan/schema-org-bundle",
+    "description": "A bundle to generate schema markup data",
+    "type": "symfony-bundle",
+    "require": {
+        "php": "^8.0",
+        "twig/twig": "^3.0",
+        "symfony/dependency-injection": "^5.4 || ^6.0 || ^7.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Abdellahramadan\\SchemaOrgBundle\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Abdellah Ramadan",
+            "email": "ramadanabdel24@gmail.com"
+        }
+    ]
+}
