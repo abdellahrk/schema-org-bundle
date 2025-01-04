@@ -2,6 +2,9 @@
 
 namespace Abdellahramadan\SchemaOrgBundle\Schema;
 
+use Abdellahramadan\SchemaOrgBundle\Schema\Thing\CreativeWork;
+use Abdellahramadan\SchemaOrgBundle\Schema\Thing\Event;
+
 class BaseType
 {
 
@@ -49,6 +52,12 @@ class BaseType
     public function setDescription(string $value): static
     {
         $this->setProperty('description', $value);
+        return $this;
+    }
+
+    public function subjectOf(Event|CreativeWork|BaseType $subjectOf): static
+    {
+        $this->setProperty('subjectOf', $this->parseChild($subjectOf));
         return $this;
     }
 
